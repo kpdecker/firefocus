@@ -15,6 +15,11 @@ Firebug.FocusModule = extend(Firebug.Module, {
     }
   },
   updateOption: function(name, data) {
+    // Default to on if the preference is not set
+    if (data === undefined) {
+      data = true;
+    }
+
     switch (name) {
     case "firefocus.logFocus":
       this.prefLogFocus = data;
@@ -44,6 +49,7 @@ Firebug.FocusModule = extend(Firebug.Module, {
     var panel = context.getPanel("html", true),
         target = event.target;
 
+    FBTrace.sysout("Focus " + this.prefLogFocus + ' ' + target.parentNode, panel);
     if (this.prefLogFocus && Firebug.Console.isAlwaysEnabled()) {
       Firebug.Console.logFormatted([i18n.getString("log.FocusIn"), target], context, "focusIn", true, null);
     }
@@ -56,6 +62,7 @@ Firebug.FocusModule = extend(Firebug.Module, {
     }
   },
   blurLogger: function(event, context) {
+      FBTrace.sysout("Blur");
     var panel = context.getPanel("html", true),
         target = event.target;
 
