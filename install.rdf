@@ -5,7 +5,7 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>firefocus@incaseofstairs.com</em:id>
-    <em:version>1.2.1</em:version>
+    <em:version>1.2.2</em:version>
     <em:type>2</em:type>
     <em:optionsURL>chrome://firefocus/content/options.xul</em:optionsURL>
 
@@ -13,7 +13,7 @@
       <Description>
           <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
           <em:minVersion>3.6</em:minVersion>
-          <em:maxVersion>5.*</em:maxVersion>
+          <em:maxVersion>7.*</em:maxVersion>
       </Description>
     </em:targetApplication>
 

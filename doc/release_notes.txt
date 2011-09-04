@@ -1,3 +1,11 @@
+09/03/2011 - 1.2.2
+
+Changes:
+- Default default property state
+- Add support for Firefox 7.0
+
+----
+
 12/03/2010 - 1.2
 
 Changes:
